@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/side_nav_search"
+        android:icon="@drawable/baseline_search_24"
+        android:title="Search"
+        android:iconTint="@color/blue"
+        
+        android:color="@color/blue"/>
+
+    <item
+        android:id="@+id/side_nav_home"
+        android:checked="true"
+        android:icon="@drawable/baseline_home_24"
+        android:title="Home"
+        android:color="@color/error_red"/>
+
+    <item
+        android:id="@+id/side_nav_profile"
+        android:icon="@drawable/baseline_person_24"
+        android:title="Profile"
+        android:color="@color/green_green"/>
+    <item
+        android:id="@+id/side_nav_login"
+        android:icon="@drawable/baseline_exit_to_app_24"
+        android:title="Log in"
+        android:color="@color/error_red"/>
+    <item
+        android:id="@+id/side_nav_logout"
+        android:icon="@drawable/baseline_exit_to_app_24"
+        android:title="Logout"
+        android:color="@color/error_red"/>
+</menu>

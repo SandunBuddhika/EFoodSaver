@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_lo"
+    android:layout_width="170dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="10sp"
+    android:layout_marginBottom="10sp"
+    android:background="@drawable/card_db">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card_components"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/productImage"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:background="@drawable/card_img_db"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/example_product"
+            app:layout_constraintBaseline_toTopOf="@id/card_components"
+            app:layout_constraintEnd_toEndOf="@id/card_components"
+            app:layout_constraintStart_toStartOf="@id/card_components"
+            app:layout_constraintTop_toTopOf="@id/card_components" />
+
+        <TextView
+            android:id="@+id/product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="Butter"
+            app:fontFamily="@font/nacelle_bold"
+            app:layout_constraintEnd_toEndOf="@+id/productImage"
+            app:layout_constraintStart_toStartOf="@+id/productImage"
+            app:layout_constraintTop_toBottomOf="@+id/productImage" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:paddingBottom="5dp"
+            app:layout_constraintEnd_toEndOf="@+id/productImage"
+            app:layout_constraintStart_toStartOf="@+id/productImage"
+            app:layout_constraintTop_toBottomOf="@+id/product_name">
+            <TextView
+                android:id="@+id/product_card_real_price"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="LKR 599.99/"
+                android:textSize="10dp"
+                android:textColor="@color/dark_light_ash" />
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="$ 599.99"
+                android:textColor="@color/green" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/hide_components_outer_lo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/card_hidden_db"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/add_watch_list"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/not_saved_heart"
+            app:layout_constraintEnd_toEndOf="@id/hide_components_outer_lo"
+            app:layout_constraintTop_toTopOf="@id/hide_components_outer_lo" />
+
+        <LinearLayout
+            android:id="@+id/hide_components"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/card_add_to_cart_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/custom_button"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Add to card"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toTopOf="@id/card_view_product_btn"
+                app:layout_constraintEnd_toEndOf="@id/hide_components"
+                app:layout_constraintStart_toStartOf="@id/hide_components"
+                app:layout_constraintTop_toTopOf="@id/hide_components" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/card_view_product_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/custom_button"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="View Product"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toBottomOf="@id/hide_components"
+                app:layout_constraintEnd_toEndOf="@id/hide_components"
+                app:layout_constraintStart_toStartOf="@id/hide_components"
+                app:layout_constraintTop_toBottomOf="@+id/card_add_to_cart_btn" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/selected_star" />
+
+                <TextView
+                    android:id="@+id/rating"
+                    android:layout_width="match_parent"
+                    android:layout_height="18dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:text="4.5"
+                    android:textAlignment="center"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/exp_date"
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="EXG: 2023/09/12"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/mfg_date"
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="MFG: 2023/09/12"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="13dp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

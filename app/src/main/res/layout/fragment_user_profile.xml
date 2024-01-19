@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserProfileFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp">
+
+            <ImageView
+                android:id="@+id/user_profile_pic"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:layout_marginTop="16dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/normal_person_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <ImageView
+                android:id="@+id/log_out"
+                android:layout_width="35sp"
+                android:layout_height="35sp"
+                android:scaleType="fitCenter"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/baseline_exit_to_app_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.946"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:text="User Profile"
+                android:textSize="28sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:text="First Name"
+                app:fontFamily="@font/nacelle_light"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/user_profile_pic" />
+
+            <EditText
+                android:id="@+id/f_name"
+                android:layout_width="0dp"
+                android:layout_height="40sp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/custom_input"
+                android:ems="10"
+                android:hint="@string/eg_sandun"
+                android:inputType="text"
+                android:isScrollContainer="false"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/textView4"
+                app:layout_constraintStart_toStartOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/textView4"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12sp"
+                android:layout_marginEnd="20dp"
+                android:text="@string/last_name"
+                app:fontFamily="@font/nacelle_light"
+                app:layout_constraintEnd_toEndOf="@id/f_name"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@id/f_name"
+                app:layout_constraintTop_toBottomOf="@id/f_name" />
+
+            <EditText
+                android:id="@+id/l_name"
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/custom_input"
+                android:ems="10"
+                android:hint="Eg: Buddhika"
+                android:inputType="number"
+                android:isScrollContainer="false"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/textView1"
+                app:layout_constraintStart_toStartOf="@+id/textView1"
+                app:layout_constraintTop_toBottomOf="@+id/textView1"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12sp"
+                android:layout_marginEnd="20dp"
+                android:text="Email Or Contact No"
+                app:fontFamily="@font/nacelle_light"
+                app:layout_constraintEnd_toEndOf="@id/l_name"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@id/l_name"
+                app:layout_constraintTop_toBottomOf="@id/l_name" />
+
+            <EditText
+                android:id="@+id/em_or_cno"
+                android:enabled="false"
+                android:focusable="false"
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/custom_input"
+                android:ems="10"
+                android:hint="Eg ; 012689313 / example@abc.com"
+                android:inputType="numberDecimal"
+                android:isScrollContainer="false"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/textView6"
+                app:layout_constraintStart_toStartOf="@+id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/textView6"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12sp"
+                android:layout_marginEnd="20dp"
+                android:text="Address Line 1"
+                app:fontFamily="@font/nacelle_light"
+                app:layout_constraintEnd_toEndOf="@id/em_or_cno"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@id/em_or_cno"
+                app:layout_constraintTop_toBottomOf="@id/em_or_cno" />
+
+            <EditText
+                android:id="@+id/add_line_1"
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/custom_input"
+                android:ems="10"
+                android:hint="Eg: 123/ Lane 1st, ABC "
+                android:isScrollContainer="false"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/textView7"
+                app:layout_constraintStart_toStartOf="@id/textView7"
+                app:layout_constraintTop_toBottomOf="@id/textView7"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12sp"
+                android:layout_marginEnd="20dp"
+                android:text="Address Line 2"
+                app:fontFamily="@font/nacelle_light"
+                app:layout_constraintEnd_toEndOf="@id/add_line_1"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@id/add_line_1"
+                app:layout_constraintTop_toBottomOf="@id/add_line_1" />
+
+            <AutoCompleteTextView
+                android:id="@+id/add_line_2"
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/custom_input"
+                android:hint="Eg: 123/ Lane 1st, ABC "
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/textView8"
+                app:layout_constraintStart_toStartOf="@id/textView8"
+                app:layout_constraintTop_toBottomOf="@id/textView8" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12sp"
+                android:layout_marginEnd="20dp"
+                android:text="Province"
+                app:fontFamily="@font/nacelle_light"
+                app:layout_constraintEnd_toEndOf="@id/add_line_2"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@id/add_line_2"
+                app:layout_constraintTop_toBottomOf="@id/add_line_2" />
+
+            <AutoCompleteTextView
+                android:id="@+id/province"
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/custom_input"
+                android:hint="Eg: Weston"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/textView9"
+                app:layout_constraintStart_toStartOf="@+id/textView9"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12sp"
+                android:layout_marginEnd="20dp"
+                android:text="District"
+                app:fontFamily="@font/nacelle_light"
+                app:layout_constraintEnd_toEndOf="@id/province"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@id/province"
+                app:layout_constraintTop_toBottomOf="@id/province" />
+
+            <EditText
+                android:id="@+id/district"
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/custom_input"
+                android:hint="Eg: Colombo"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/textView10"
+                app:layout_constraintStart_toStartOf="@+id/textView10"
+                app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12sp"
+                android:layout_marginEnd="20dp"
+                android:text="City"
+                app:fontFamily="@font/nacelle_light"
+                app:layout_constraintEnd_toEndOf="@id/district"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@id/district"
+                app:layout_constraintTop_toBottomOf="@id/district" />
+
+            <EditText
+                android:id="@+id/city"
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/custom_input"
+                android:hint="Eg: Boralesgamuwa"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/textView11"
+                app:layout_constraintStart_toStartOf="@+id/textView11"
+                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/user_update_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16sp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/custom_button"
+                android:text="Upload"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/city"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@id/city"
+                app:layout_constraintTop_toBottomOf="@id/city" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
